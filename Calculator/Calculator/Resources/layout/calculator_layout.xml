@@ -14,36 +14,36 @@
 		android:inputType="number"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/firstNumberEditText" />
+		android:id="@+id/firstEditText" />
 	<EditText
 		android:inputType="number"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/secondNumberEditText" />
+		android:id="@+id/secondEditText" />
 	<Button
-		android:text="liida"
+		android:text="@string/add_button"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/addButton" />
 	<Button
-	android:text="lahuta"
-	android:layout_width="match_parent"
-	android:layout_height="wrap_content"
-	android:id="@+id/subtractButton" />
+		android:text="@string/subtract_button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/subtractButton"/>
 	<Button
-	android:text="korruta"
-	android:layout_width="match_parent"
-	android:layout_height="wrap_content"
-	android:id="@+id/multiplyButton" />
+		android:text="@string/multiply_button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/multiplyButton" />
 	<Button
-	android:text="jaga"
-	android:layout_width="match_parent"
-	android:layout_height="wrap_content"
-	android:id="@+id/divideButton" />
+		android:text="jaga"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/divideButton" />
 	<TextView
 		android:text="Vastus"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/answerTextView" />
+		android:id="@+id/answerText" />
 
 </LinearLayout>
