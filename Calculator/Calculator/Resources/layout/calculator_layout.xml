@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<TextView
+		android:text="Calculator"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/textView1" />
+	<EditText
+		android:inputType="number"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/firstNumberEditText" />
+	<EditText
+		android:inputType="number"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/secondNumberEditText" />
+	<Button
+		android:text="liida"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/addButton" />
+	<Button
+	android:text="lahuta"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:id="@+id/subtractButton" />
+	<Button
+	android:text="korruta"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:id="@+id/multiplyButton" />
+	<Button
+	android:text="jaga"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:id="@+id/divideButton" />
+	<TextView
+		android:text="Vastus"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/answerTextView" />
+
+</LinearLayout>
