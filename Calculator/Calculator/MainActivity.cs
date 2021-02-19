@@ -9,9 +9,9 @@ namespace Calculator
 {
     [Activity(
         Label = "@string/app_name", 
-        Theme = "@style/AppTheme", 
-        MainLauncher = true)
-        ]
+        Theme = "@style/AppTheme",
+        MainLauncher = true
+        )]
     public class MainActivity : AppCompatActivity
     {
 
@@ -23,17 +23,24 @@ namespace Calculator
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-            var button = FindViewById<Button>(Resource.Id.button1);
+            var calcButton = FindViewById<Button>(Resource.Id.toCalcButton);
+            var tipCalcButton = FindViewById<Button>(Resource.Id.toTipCalcButton);
 
-            button.Click += Button_Click;
+            calcButton.Click += CalcButton_Click;
+            tipCalcButton.Click += TipCalcButton_Click;
         }
 
-        private void Button_Click(object sender, System.EventArgs e)
+        private void TipCalcButton_Click(object sender, System.EventArgs e)
+        {
+            var intent = new Intent(this, typeof(TipcalcActivity));
+            StartActivity(intent);
+        }
+
+        private void CalcButton_Click(object sender, System.EventArgs e)
         {
             var intent = new Intent(this, typeof(CalculatorActivity));
             StartActivity(intent);
         }
-
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);

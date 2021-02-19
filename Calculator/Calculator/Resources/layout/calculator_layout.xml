@@ -48,9 +48,15 @@
 			android:id="@+id/divideButton" />
 		</LinearLayout>
 
+		<TextView
+		android:textAlignment="center"
+		android:text="@string/Vastus"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+
 	<TextView
 		android:textAlignment="center"
-		android:text="Vastus"
+		android:text=""
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/answerText" />

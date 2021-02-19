@@ -5,4 +5,8 @@
   <string name="subtract_button">Subtract</string>
   <string name="multiply_button">Multiply</string>
   <string name="divide_button">Divide</string>
+  <string name="Vastus">Vastus</string>
+  <string name="Arvuta">Arvuta</string>
+  <string name="Koguarve">Koguarve</string>
+  <string name="Jootraha">Jootraha</string>
 </resources>
