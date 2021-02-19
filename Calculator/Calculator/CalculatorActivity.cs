@@ -5,7 +5,7 @@ using System;
 
 namespace Calculator
 {
-    [Activity(Label = "CalculatorActivity", Theme = "@style/AppTheme")]
+    [Activity(Label = "CalculatorActivity", Theme = "@style/CustomTheme")]
     public class CalculatorActivity : Activity
     {
 
