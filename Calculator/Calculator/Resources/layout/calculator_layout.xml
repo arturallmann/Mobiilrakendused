@@ -20,27 +20,34 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/secondEditText" />
-	<Button
+	<LinearLayout
+		android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100px">
+			<Button
 		android:text="@string/add_button"
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:id="@+id/addButton" />
 	<Button
 		android:text="@string/subtract_button"
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:id="@+id/subtractButton"/>
 	<Button
 		android:text="@string/multiply_button"
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:id="@+id/multiplyButton" />
 	<Button
-		android:text="jaga"
-		android:layout_width="match_parent"
+		android:text="@string/divide_button"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:id="@+id/divideButton" />
+		</LinearLayout>
+
 	<TextView
+		android:textAlignment="center"
 		android:text="Vastus"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"

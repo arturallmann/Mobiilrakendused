@@ -32,6 +32,7 @@ namespace Calculator
             subtractButton.Click += SubtractButton_Click;
             divideButton.Click += DivideButton_Click;
             multiplyButton.Click += MultiplyButton_Click;
+
         }
         private void AddButton_Click(object sender, EventArgs e)
         {
