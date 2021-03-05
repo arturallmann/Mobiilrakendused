@@ -14,7 +14,6 @@ namespace ListExercise
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -27,12 +26,13 @@ namespace ListExercise
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
 
+
             var items = new List<Car>
             {
-                new Car{ Manufacturer = "Ford", Model = "Focus", Kw = 80},
+                new Car{ Manufacturer = "Ford", Model = "Focus", Kw = 80, Image = Resource.Drawable.ford },
                 new Car{ Manufacturer = "Bmw", Model = "3 seeria", Kw = 35},
                 new Car{ Manufacturer = "Mercedes", Model = "E klass", Kw = 263},
-                new Car{ Manufacturer = "Volkswagen", Model = "Passat", Kw = 343},
+                new Car{ Manufacturer = "Volkswagen", Model = "Passat", Kw = 343, Image = Resource.Drawable.volkswagen},
                 new Car{ Manufacturer = "Fiat", Model = "Punto", Kw = 555},
                 new Car{ Manufacturer = "Ferrari", Model = "360", Kw = 34},
                 new Car{ Manufacturer = "Lamborghini", Model = "Hurracan", Kw = 234},
@@ -64,10 +64,11 @@ namespace ListExercise
                 new Car{ Manufacturer = "Fiat", Model = "Punto", Kw = 555},
                 new Car{ Manufacturer = "Ferrari", Model = "360", Kw = 34},
                 new Car{ Manufacturer = "Lamborghini", Model = "Hurracan", Kw = 234},
-
             };
+
             var carListView = FindViewById<ListView>(Resource.Id.carListView);
             carListView.Adapter = new CarAdapter(this, items);
+
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -89,7 +90,7 @@ namespace ListExercise
 
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
-            View view = (View) sender;
+            View view = (View)sender;
             Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
                 .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
         }
@@ -100,5 +101,5 @@ namespace ListExercise
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
-	}
+    }
 }

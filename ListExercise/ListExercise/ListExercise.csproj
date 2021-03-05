@@ -63,7 +63,7 @@
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Models\Car.cs" />
-    <Compile Include="Models\CarAdapter.cs" />
+    <Compile Include="CarAdapter.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
