@@ -11,7 +11,7 @@ using System.Text;
 
 namespace ListExercise.Models
 {
-    public class Car
+    public class People
     {
         public string Manufacturer { get; set; }
         public string Model { get; set; }

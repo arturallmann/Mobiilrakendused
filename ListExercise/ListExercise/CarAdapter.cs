@@ -12,18 +12,18 @@ using System.Text;
 
 namespace ListExercise
 {
-    public class CarAdapter : BaseAdapter<Car>
+    public class CarAdapter : BaseAdapter<People>
     {
-        List<Car> _items;
+        List<People> _items;
         Activity _context;
 
-        public CarAdapter(Activity context, List<Car> items)
+        public CarAdapter(Activity context, List<People> items)
         {
             _items = items;
             _context = context;
         }
 
-        public override Car this[int position]
+        public override People this[int position]
         {
             get { return _items[position]; }
         }

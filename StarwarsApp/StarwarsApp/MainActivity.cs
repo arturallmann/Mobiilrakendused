@@ -22,6 +22,10 @@ namespace StarwarsApp
             var data = await remoteDataService.GetStarwarsPeople();
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+
+            var listview = FindViewById<ListView>(Resource.Id.peopleListView);
+            listViewAdapter = new PeopleAdapter(this, data.results);
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
