@@ -11,13 +11,11 @@ using System.Text;
 namespace StarwarsApp.Models
 {
 
-    public class Films
+    public class Starships
     {
         public int count { get; set; }
         public object next { get; set; }
         public object previous { get; set; }
-        public List<Result> results { get; set; }
+        public List<StarshipsDetails> results { get; set; }
     }
-
-
 }

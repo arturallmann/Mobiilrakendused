@@ -9,22 +9,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Xamarin.Essentials;
 
-namespace ListExercise.Adapters
+namespace StarwarsApp.Adapters
 {
-    public class PeopleAdapter : BaseAdapter<PeopleDetails>
+    public class FilmsAdapter : BaseAdapter<FilmsDetails>
     {
-        List<PeopleDetails> _items;
+        List<FilmsDetails> _items;
         Activity _context;
 
-        public PeopleAdapter(Activity context, List<PeopleDetails> items)
+        public FilmsAdapter(Activity context, List<FilmsDetails> items)
         {
             _items = items;
             _context = context;
         }
 
-        public override PeopleDetails this[int position]
+        public override FilmsDetails this[int position]
         {
             get { return _items[position]; }
         }
@@ -43,9 +42,9 @@ namespace ListExercise.Adapters
         {
             View view = convertView;
             if (view == null)
-                view = _context.LayoutInflater.Inflate(Resource.Layout.people_row_layout, null);
-            view.FindViewById<TextView>(Resource.Id.nameTextView).Text = _items[position].name;
-            view.FindViewById<TextView>(Resource.Id.ageTextView).Text = _items[position].birth_year;
+                view = _context.LayoutInflater.Inflate(Resource.Layout.films_row_layout, null);
+            view.FindViewById<TextView>(Resource.Id.nameTextView).Text = _items[position].title;
+            view.FindViewById<TextView>(Resource.Id.yearTextView).Text = _items[position].release_date;
 
             return view;
         }

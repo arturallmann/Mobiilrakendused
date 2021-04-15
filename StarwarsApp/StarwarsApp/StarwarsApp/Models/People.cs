@@ -10,12 +10,12 @@ using System.Text;
 
 namespace StarwarsApp.Models
 {
-    public class Ships
+
+    public class People
     {
         public int count { get; set; }
         public string next { get; set; }
         public object previous { get; set; }
-        public List<Result> results { get; set; }
+        public List<PeopleDetails> results { get; set; }
     }
-
 }

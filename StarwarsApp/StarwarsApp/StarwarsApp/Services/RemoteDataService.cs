@@ -28,6 +28,7 @@ namespace StarwarsApp.Services
             }
             return data;         
         }
+
         public async Task<Films> GetStarwarsFilms()
         {
             var client = new HttpClient();
@@ -39,17 +40,19 @@ namespace StarwarsApp.Services
             }
             return data;
         }
-        public async Task<Ships> GetStarwarsShips()
+
+        public async Task<Starships> GetStarwarsStarships()
         {
             var client = new HttpClient();
-            var response = await client.GetStringAsync("https://swapi.dev/api/ships/");
-            Ships data = null;
+            var response = await client.GetStringAsync("https://swapi.dev/api/starships/");
+            Starships data = null;
             if (response != null)
             {
-                data = JsonConvert.DeserializeObject<Ships>(response);
+                data = JsonConvert.DeserializeObject<Starships>(response);
             }
             return data;
         }
+
         public async Task<Planets> GetStarwarsPlanets()
         {
             var client = new HttpClient();
