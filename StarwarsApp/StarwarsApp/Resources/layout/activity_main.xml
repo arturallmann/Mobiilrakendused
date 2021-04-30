@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <Button
+        android:text="@string/people"
+        android:layout_width="195dp"
+        android:layout_height="170dp"
+        android:id="@+id/peopleButton" />
+    <Button
+        android:text="@string/films"
+        android:layout_width="195dp"
+        android:layout_height="170dp"
+        android:layout_toRightOf="@id/peopleButton"
+        android:id="@+id/filmsButton" />
+    <Button
+        android:text="@string/ships"
+        android:layout_width="195dp"
+        android:layout_height="170dp"
+        android:layout_below="@id/peopleButton"
+        android:id="@+id/starshipsButton" />
+    <Button
+        android:text="@string/planets"
+        android:layout_width="195dp"
+        android:layout_height="170dp"
+        android:layout_toRightOf="@id/starshipsButton"
+        android:id="@+id/planetsButton"
+        android:layout_below="@id/filmsButton" />
+</RelativeLayout>
