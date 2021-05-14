@@ -43,8 +43,8 @@ namespace StarwarsApp.Adapters
             View view = convertView;
             if (view == null)
                 view = _context.LayoutInflater.Inflate(Resource.Layout.people_row_layout, null);
-            view.FindViewById<TextView>(Resource.Id.nameTextView).Text += _items[position].name;
-            view.FindViewById<TextView>(Resource.Id.ageTextView).Text += _items[position].birth_year;
+            view.FindViewById<TextView>(Resource.Id.nameTextView).Text = _items[position].name;
+            view.FindViewById<TextView>(Resource.Id.ageTextView).Text = _items[position].birth_year;
          
             return view;
         }

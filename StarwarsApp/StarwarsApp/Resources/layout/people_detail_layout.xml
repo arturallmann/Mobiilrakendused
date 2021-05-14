@@ -67,37 +67,5 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:id="@+id/genderTextview" />
-                <listView
-        android:text="Filmid: "
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/filmsListview" />
-                    <listView
-        android:text="Species: "
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/speciesListview" />
-                    <listView
-        android:text="Sõidukid: "
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/vehiclesListview" />
-                    <listView
-        android:text="Star Ships: "
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/starshipsListview" />
 
 </LinearLayout>
