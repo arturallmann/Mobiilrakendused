@@ -15,10 +15,10 @@ using System.Text;
 
 namespace StarwarsApp
 {
-    [Activity(Label = "PlanetsActivity")]
-    public class PlanetsActivity : Activity
+    [Activity(Label = "StarshipsActivity")]
+    public class StarshipsActivity : Activity
     {
-        Planets planetsdata = new Planets();
+        Starships starshipsdata = new Starships();
         protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -26,23 +26,26 @@ namespace StarwarsApp
             // Create your application here
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
-            SetContentView(Resource.Layout.planets_layout);
+            SetContentView(Resource.Layout.starships_layout);
 
             var remoteDataService = new RemoteDataService();
-            planetsdata = await remoteDataService.GetStarwarsPlanets();
+            starshipsdata = await remoteDataService.GetStarwarsStarships();
 
-            var planetslistview = FindViewById<ListView>(Resource.Id.planetsListView);
-            planetslistview.Adapter = new PlanetsAdapter(this, planetsdata.results);
-            planetslistview.ItemClick += OnListItemClick;
+            var starshipslistview = FindViewById<ListView>(Resource.Id.starshipsListView);
+            starshipslistview.Adapter = new StarshipsAdapter(this, starshipsdata.results);
+            starshipslistview.ItemClick += OnListItemClick;
+
         }
         private void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             var rowNumberClick = e.Position;
 
-            var t = planetsdata.results[rowNumberClick];
+            var t = starshipsdata.results[rowNumberClick];
 
-            var intent = new Intent(this, typeof(PlanetsDetailActivity));
-            intent.PutExtra("planetsDetail", JsonConvert.SerializeObject(t));
+            var intent = new Intent(this, typeof(StarshipsDetailActivity));
+            intent.PutExtra("StarshipsDetail", JsonConvert.SerializeObject(t));
+            StartActivity(intent);
         }
+
     }
 }

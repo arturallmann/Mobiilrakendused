@@ -23,6 +23,9 @@ namespace StarwarsApp
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             var remoteDataService = new RemoteDataService();
             var peopledata = await remoteDataService.GetStarwarsPeople();
+            var filmsdata = await remoteDataService.GetStarwarsFilms();
+            var planetsdata = await remoteDataService.GetStarwarsPlanets();
+            var starshipsdata = await remoteDataService.GetStarwarsStarships();
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
@@ -32,16 +35,35 @@ namespace StarwarsApp
 
 
             var peopleButton = FindViewById<Button>(Resource.Id.peopleButton);
-
+            var filmsButton = FindViewById<Button>(Resource.Id.filmsButton);
+            var planetsButton = FindViewById<Button>(Resource.Id.planetsButton);
+            var starshipsButton = FindViewById<Button>(Resource.Id.starshipsButton);
 
             peopleButton.Click += PeopleButton_Click;
+            filmsButton.Click += FilmsButton_Click;
+            planetsButton.Click += PlanetsButton_Click;
+            starshipsButton.Click += StarshipsButton_Click;
         }
         private void PeopleButton_Click(object sender, System.EventArgs e)
         {
             var intent = new Intent(this, typeof(PeopleActivity));
             StartActivity(intent);
         }
-
+        private void FilmsButton_Click(object sender, System.EventArgs e)
+        {
+            var intent = new Intent(this, typeof(FilmsActivity));
+            StartActivity(intent);
+        }
+        private void PlanetsButton_Click(object sender, System.EventArgs e)
+        {
+            var intent = new Intent(this, typeof(PlanetsActivity));
+            StartActivity(intent);
+        }
+        private void StarshipsButton_Click(object sender, System.EventArgs e)
+        {
+            var intent = new Intent(this, typeof(StarshipsActivity));
+            StartActivity(intent);
+        }
         //private void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
         //{
         //    var rowNumberThatWasClicked = e.Position;

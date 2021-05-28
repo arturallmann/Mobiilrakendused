@@ -26,9 +26,9 @@ namespace StarwarsApp
             var descriptionText = FindViewById<TextView>(Resource.Id.descriptionTextview);
             var directorText = FindViewById<TextView>(Resource.Id.directorTextview);
             var producerText = FindViewById<TextView>(Resource.Id.producerTextview);
-            var releaseText = FindViewById<TextView>(Resource.Id.releaseDateTextview);
+            var releaseText = FindViewById<TextView>(Resource.Id.releaseDateTextView);
 
-            var FilmsDetailJson = Intent.GetStringExtra("PeopleDetail");
+            var FilmsDetailJson = Intent.GetStringExtra("FilmsDetail");
             var details = JsonConvert.DeserializeObject<FilmsDetails>(FilmsDetailJson);
 
             titleText.Text += details.title;
