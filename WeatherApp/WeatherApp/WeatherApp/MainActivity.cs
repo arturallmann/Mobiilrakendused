@@ -28,7 +28,7 @@ namespace WeatherApp
 
             var weatherService = new WeatherService();
             citySearch.SearchClick += citySearch_Click;
-            var cityText = citySearch.ToString;
+            var cityText = citySearch.ToString();
 
             var weatherInfo = await weatherService.GetCityWeather(cityText);
             cityTextView.Text = weatherInfo.Name;
