@@ -33,14 +33,14 @@ namespace StarwarsApp
             var PeopleDetailJson = Intent.GetStringExtra("PeopleDetail");
             var details = JsonConvert.DeserializeObject<PeopleDetails>(PeopleDetailJson);
 
-            nameText.Text = details.name;
-            heightText.Text = details.height;
-            weightText.Text = details.mass;
-            hairColorText.Text = details.hair_color;
-            skinColorText.Text = details.skin_color;
-            eyeColorText.Text = details.eye_color;
-            birthYearText.Text = details.birth_year;
-            genderText.Text = details.gender;
+            nameText.Text += details.name;
+            heightText.Text += details.height;
+            weightText.Text += details.mass;
+            hairColorText.Text += details.hair_color;
+            skinColorText.Text += details.skin_color;
+            eyeColorText.Text += details.eye_color;
+            birthYearText.Text += details.birth_year;
+            genderText.Text += details.gender;
             // Create your application here
         }
     }
