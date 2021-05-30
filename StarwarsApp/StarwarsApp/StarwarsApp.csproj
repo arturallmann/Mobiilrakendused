@@ -66,7 +66,6 @@
     <Compile Include="Adapters\PeopleAdapter.cs" />
     <Compile Include="Adapters\PlanetsAdapter.cs" />
     <Compile Include="Adapters\StarshipsAdapter.cs" />
-    <Compile Include="DetailActivity.cs" />
     <Compile Include="FilmsActivity.cs" />
     <Compile Include="FilmsDetailActivity.cs" />
     <Compile Include="MainActivity.cs" />

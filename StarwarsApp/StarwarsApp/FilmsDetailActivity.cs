@@ -34,6 +34,7 @@ namespace StarwarsApp
             titleText.Text += details.title;
             episodeText.Text += details.episode_id;
             descriptionText.Text += details.opening_crawl;
+            producerText.Text += details.producer;
             directorText.Text += details.director;
             releaseText.Text += details.release_date;
             // Create your application here

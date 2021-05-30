@@ -34,7 +34,6 @@ namespace StarwarsApp
             var filmslistview = FindViewById<ListView>(Resource.Id.filmsListView);
             filmslistview.Adapter = new FilmsAdapter(this, filmsdata.results);
             filmslistview.ItemClick += OnListItemClick;
-
         }
         private void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
@@ -43,7 +42,7 @@ namespace StarwarsApp
             var t = filmsdata.results[rowNumberClick];
 
             var intent = new Intent(this, typeof(FilmsDetailActivity));
-            intent.PutExtra("peopleDetail", JsonConvert.SerializeObject(t));
+            intent.PutExtra("FilmsDetail", JsonConvert.SerializeObject(t));
             StartActivity(intent);
         }
     }

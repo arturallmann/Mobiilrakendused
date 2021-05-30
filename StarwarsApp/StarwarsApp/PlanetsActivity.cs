@@ -42,7 +42,8 @@ namespace StarwarsApp
             var t = planetsdata.results[rowNumberClick];
 
             var intent = new Intent(this, typeof(PlanetsDetailActivity));
-            intent.PutExtra("planetsDetail", JsonConvert.SerializeObject(t));
+            intent.PutExtra("PlanetsDetail", JsonConvert.SerializeObject(t));
+            StartActivity(intent);
         }
     }
 }

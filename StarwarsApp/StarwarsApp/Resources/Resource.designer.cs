@@ -3582,11 +3582,11 @@ namespace StarwarsApp
 			// aapt resource value: 0x7F08007B
 			public const int multiply = 2131230843;
 			
-			// aapt resource value: 0x7F08007C
-			public const int nameTextView = 2131230844;
-			
 			// aapt resource value: 0x7F08007D
 			public const int nameTextview = 2131230845;
+			
+			// aapt resource value: 0x7F08007C
+			public const int nameTextView = 2131230844;
 			
 			// aapt resource value: 0x7F08007E
 			public const int navigation_header_container = 2131230846;
@@ -3865,64 +3865,61 @@ namespace StarwarsApp
 			public const int titleTextView = 2131230935;
 			
 			// aapt resource value: 0x7F0800D8
-			public const int titleTextview = 2131230936;
+			public const int title_template = 2131230936;
 			
 			// aapt resource value: 0x7F0800D9
-			public const int title_template = 2131230937;
+			public const int top = 2131230937;
 			
 			// aapt resource value: 0x7F0800DA
-			public const int top = 2131230938;
+			public const int topPanel = 2131230938;
 			
 			// aapt resource value: 0x7F0800DB
-			public const int topPanel = 2131230939;
+			public const int touch_outside = 2131230939;
 			
 			// aapt resource value: 0x7F0800DC
-			public const int touch_outside = 2131230940;
+			public const int transition_current_scene = 2131230940;
 			
 			// aapt resource value: 0x7F0800DD
-			public const int transition_current_scene = 2131230941;
+			public const int transition_layout_save = 2131230941;
 			
 			// aapt resource value: 0x7F0800DE
-			public const int transition_layout_save = 2131230942;
+			public const int transition_position = 2131230942;
 			
 			// aapt resource value: 0x7F0800DF
-			public const int transition_position = 2131230943;
+			public const int transition_scene_layoutid_cache = 2131230943;
 			
 			// aapt resource value: 0x7F0800E0
-			public const int transition_scene_layoutid_cache = 2131230944;
+			public const int transition_transform = 2131230944;
 			
 			// aapt resource value: 0x7F0800E1
-			public const int transition_transform = 2131230945;
+			public const int uniform = 2131230945;
 			
 			// aapt resource value: 0x7F0800E2
-			public const int uniform = 2131230946;
+			public const int unlabeled = 2131230946;
 			
 			// aapt resource value: 0x7F0800E3
-			public const int unlabeled = 2131230947;
+			public const int up = 2131230947;
 			
 			// aapt resource value: 0x7F0800E4
-			public const int up = 2131230948;
+			public const int useLogo = 2131230948;
 			
 			// aapt resource value: 0x7F0800E5
-			public const int useLogo = 2131230949;
+			public const int view_offset_helper = 2131230949;
 			
 			// aapt resource value: 0x7F0800E6
-			public const int view_offset_helper = 2131230950;
+			public const int visible = 2131230950;
 			
 			// aapt resource value: 0x7F0800E7
-			public const int visible = 2131230951;
+			public const int waterTextview = 2131230951;
 			
 			// aapt resource value: 0x7F0800E8
-			public const int waterTextview = 2131230952;
+			public const int weightTextview = 2131230952;
 			
 			// aapt resource value: 0x7F0800E9
-			public const int weightTextview = 2131230953;
+			public const int withText = 2131230953;
 			
 			// aapt resource value: 0x7F0800EA
-			public const int withText = 2131230954;
-			
-			// aapt resource value: 0x7F0800EB
-			public const int wrap_content = 2131230955;
+			public const int wrap_content = 2131230954;
 			
 			static Id()
 			{

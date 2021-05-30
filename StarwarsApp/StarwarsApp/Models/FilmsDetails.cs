@@ -6,7 +6,7 @@ namespace StarwarsApp.Models
     public class FilmsDetails
     {
         public string title { get; set; }
-        public int episode_id { get; set; }
+        public string episode_id { get; set; }
         public string opening_crawl { get; set; }
         public string director { get; set; }
         public string producer { get; set; }
