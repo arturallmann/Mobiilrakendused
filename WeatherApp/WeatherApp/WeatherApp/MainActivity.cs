@@ -12,7 +12,7 @@ namespace WeatherApp
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        SearchView citySearch;
+        EditText citySearch;
         protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -23,11 +23,11 @@ namespace WeatherApp
             var cityTextView = FindViewById<TextView>(Resource.Id.cityTextView);
             var tempTextView = FindViewById<TextView>(Resource.Id.tempTextView);
             var weatherImage = FindViewById<ImageView>(Resource.Id.weatherImage);
-            citySearch = FindViewById<SearchView>(Resource.Id.citySearchView);
+            citySearch = FindViewById<EditText>(Resource.Id.cityEditText);
             
 
             var weatherService = new WeatherService();
-            citySearch.SearchClick += citySearch_Click;
+            citySearch.Click += citySearch_Click;
             var cityText = citySearch.ToString();
 
             var weatherInfo = await weatherService.GetCityWeather(cityText);
@@ -39,10 +39,10 @@ namespace WeatherApp
         public void citySearch_Click(object sender, EventArgs e)
         {
             
-            var citySearchView = FindViewById<SearchView>(Resource.Id.citySearchView);
+            var citySearchView = FindViewById<EditText>(Resource.Id.cityEditText);
             string searchText = citySearchView.ToString();
             
-            citySearch = searchText;
+            citySearch = (EditText)searchText;
             
 
         }

@@ -3603,7 +3603,7 @@ namespace WeatherApp
 			public const int chronometer = 2131230798;
 			
 			// aapt resource value: 0x7F08004F
-			public const int citySearchView = 2131230799;
+			public const int cityEditText = 2131230799;
 			
 			// aapt resource value: 0x7F080050
 			public const int cityTextView = 2131230800;
