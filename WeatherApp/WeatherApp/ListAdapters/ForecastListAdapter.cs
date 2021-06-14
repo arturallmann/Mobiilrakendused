@@ -13,7 +13,7 @@ namespace WeatherApp.ListAdapters
     {
         List<WeatherItem> _items;
         Activity _context;
-        String _cityEditText;
+        
 
         public ForecastListAdapter(Activity context, List<WeatherItem> items)
         {
@@ -39,12 +39,14 @@ namespace WeatherApp.ListAdapters
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
+            var weatherService = new WeatherService();
+            var weatherInfo = weatherService.GetCityWeather(_items[position].ToString());
             View view = convertView;
             if (view == null)
                 view = _context.LayoutInflater.Inflate(Resource.Layout.forecast_row_layout, null);
             view.FindViewById<TextView>(Resource.Id.forecastTimeTextView).Text = _items[position].dt_txt;
             view.FindViewById<TextView>(Resource.Id.forecastTempTextView).Text = _items[position].main.Temp.ToString();
-            view.FindViewById<ImageView>(Resource.Id.forecastImage);
+            view.FindViewById<ImageView>(Resource.Id.forecastImage).SetImageBitmap(weatherService.GetImageFromUrl($"https://openweathermap.org/img/wn/{weatherInfo.Weather[position].Icon}@2x.png"));
             return view;
         }
     }
